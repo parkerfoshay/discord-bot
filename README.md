@@ -20,7 +20,7 @@ It currently has the following commands:
 
 * `!poke` followed by a single number below 899 with.
 
-    * Ex: `!quotient 94` will return:
+    * Ex: `!poke 94` will return:
 
         * ![image of Gengar](./assets/images/Gengar-response.png).
 
