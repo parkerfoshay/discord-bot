@@ -1,14 +1,5 @@
-const fetch = require("node-fetch");
+const {getapi} = require("../utils/fetcher.js");
 const { MessageEmbed } = require("discord.js");
-const getapi = async (url) => {
-  // Storing response
-  const response = await fetch(url);
-
-  // Storing data in form of JSON
-  let data = await response.json();
-
-  return data;
-};
 
 const prefix = "!";
 
@@ -43,12 +34,11 @@ function PokeFinder(message) {
       })
       .catch((err) => {
         console.log(err);
+        message.reply(
+          "Currently there are only 898 pokemon, please try a number 898 and below."
+        );
       });
-  } else {
-    message.reply(
-      "Currently there are only 898 pokemon, please try a number 898 and below."
-    );
-  }
+  } 
 }
 
 module.exports = { PokeFinder };
